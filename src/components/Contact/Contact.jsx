@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 export const Contact = ({ name, number, onDeleteContact, id }) => {
   return (
     <>
@@ -8,3 +10,10 @@ export const Contact = ({ name, number, onDeleteContact, id }) => {
     </>
   );
 };
+
+Contact.propTypes = {
+    name: PropTypes.string.isRequired,
+    number: PropTypes.string.isRequired,
+    onDeleteContact: PropTypes.func.isRequired,
+    id: PropTypes.string.isRequired,
+  };
