@@ -1,9 +1,10 @@
+import { StyledInput, StyledTitle } from 'components/Filter/Filter.styled';
 import PropTypes from 'prop-types';
 export const Filter = ({ onChangeFilter }) => {
   return (
     <>
-      <h3>Find contacts by name</h3>
-      <input
+      <StyledTitle>Find contacts by name</StyledTitle>
+      <StyledInput
         type="text"
         name="name"
         pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
@@ -16,5 +17,5 @@ export const Filter = ({ onChangeFilter }) => {
 };
 
 Filter.propTypes = {
-    onChangeFilter: PropTypes.func.isRequired,
-  };
+  onChangeFilter: PropTypes.func.isRequired,
+};
