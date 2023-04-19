@@ -3,19 +3,17 @@ import { Contact } from 'components/Contact/Contact';
 
 export const ContactList = ({ contacts, onDeleteContact }) => {
   return (
-    <>
-      <ul>
-        {contacts.map(({ name, number, id }) => (
-          <Contact
-            key={id}
-            id={id}
-            name={name}
-            number={number}
-            onDeleteContact={onDeleteContact}
-          />
-        ))}
-      </ul>
-    </>
+    <ul>
+      {contacts.map(({ name, number, id }) => (
+        <Contact
+          key={id}
+          id={id}
+          name={name}
+          number={number}
+          onDeleteContact={onDeleteContact}
+        />
+      ))}
+    </ul>
   );
 };
 
